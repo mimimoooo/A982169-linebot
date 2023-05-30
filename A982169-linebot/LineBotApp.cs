@@ -114,7 +114,7 @@ public class LineBotApp : WebhookApplication
             //檢查
             if (subs.Length == 3)
             {
-                if (subs[0] == "嶺東猴子")
+                if (subs[0] == "昴昴迷迷")
                 {
                     _pool.Add(subs[1],subs[2]);
                 }
