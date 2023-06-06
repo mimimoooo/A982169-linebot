@@ -47,13 +47,20 @@ public class LineBotApp : WebhookApplication
                         TeachDog(text);
                     }
                 }
- 
+
+                if (text.Contains("早安"))
+                {
+                    result = new List<ISendMessage>
+                    {
+                        new TextMessage("早上好")
+                    };
+                }
                 
                 //回傳 hellow
-                result = new List<ISendMessage>
+                /*result = new List<ISendMessage>
                 {
                     new TextMessage("早上好")
-                };
+                };*/
                 
             }
                 break;
@@ -92,7 +99,7 @@ public class LineBotApp : WebhookApplication
             //檢查
             if (subs.Length == 3)
             {
-                if (subs[0] == "昴昴迷迷")
+                if (subs[0] == "迷子")
                 {
                     result = true;
                 }
@@ -114,7 +121,7 @@ public class LineBotApp : WebhookApplication
             //檢查
             if (subs.Length == 3)
             {
-                if (subs[0] == "昴昴迷迷")
+                if (subs[0] == "迷子")
                 {
                     _pool.Add(subs[1],subs[2]);
                 }
