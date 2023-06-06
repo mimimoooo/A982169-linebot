@@ -54,14 +54,25 @@ public class LineBotApp : WebhookApplication
                     {
                         new TextMessage("早上好")
                     };
+                    var imageMessage = new ImageMessage
+                        ("https://i.imgur.com/3zeu5r4.jpg","https://i.imgur.com/3zeu5r4.jpg");
+
                 }
-                
-                //回傳 hellow
-                /*result = new List<ISendMessage>
+                if (text.Contains("午安"))
                 {
-                    new TextMessage("早上好")
-                };*/
-                
+                    result = new List<ISendMessage>
+                    {
+                        new TextMessage("中午好")
+                    };
+                }
+                if (text.Contains("晚安"))
+                {
+                    result = new List<ISendMessage>
+                    {
+                        new TextMessage("晚上好")
+                    };
+                }
+
             }
                 break;
         }
