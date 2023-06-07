@@ -29,7 +29,7 @@ public class LineBotApp : WebhookApplication
                 var userId = ev.Source.UserId;
                 //使用者輸入的文字
                 var text = ((TextEventMessage)ev.Message).Text;
- 
+
                 if (PoolHasMsg(text))
                 {
                     // 從記憶體池查詢資料
@@ -47,15 +47,15 @@ public class LineBotApp : WebhookApplication
                         TeachDog(text);
                     }
                 }
-                var NewImage = new ImageMessage("https://i.imgur.com/PbqOtx2.jpg","https://i.imgur.com/4KupbPY.jpg");
 
                 if (text.Contains("早安"))
                 {
                     result = new List<ISendMessage>
                     {
-                        new TextMessage("早上好" + NewImage)
+                        new TextMessage("早上好"),
+                        new ImageMessage("https://i.imgur.com/PbqOtx2.jpg","https://i.imgur.com/4KupbPY.jpg")
                     };
-
+                    
                 }
                 if (text.Contains("午安"))
                 {
