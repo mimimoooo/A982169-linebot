@@ -7,7 +7,7 @@
 ## 安裝
 加入好友
 
-![](https://qr-official.line.me/sid/L/497yemfo.png)
+![](https://qr-official.line.me/sid/L/497yemfo.png "游標顯示")
 
 ## 使用方式
 在你想說早午晚安的時候，跟他說早安/午安/晚安。
