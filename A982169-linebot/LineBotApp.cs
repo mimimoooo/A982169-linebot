@@ -47,14 +47,14 @@ public class LineBotApp : WebhookApplication
                         TeachDog(text);
                     }
                 }
+                var NewImage = new ImageMessage("https://i.imgur.com/PbqOtx2.jpg","https://i.imgur.com/4KupbPY.jpg");
 
                 if (text.Contains("早安"))
                 {
                     result = new List<ISendMessage>
                     {
-                        new TextMessage("早上好")
+                        new TextMessage("早上好" + NewImage)
                     };
-                    new ImageMessage("https://i.imgur.com/PbqOtx2.jpg","https://i.imgur.com/4KupbPY.jpg");
 
                 }
                 if (text.Contains("午安"))
